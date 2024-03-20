@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Crazy Bounty Hunter</title>
+    <link rel="stylesheet" href="./style.css">
+     <!-- Firebase -->
+     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+  <!-- Jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<!-- Bootstrap -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
+  integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf"
+  crossorigin="anonymous"></script> 
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCj8WIP4W9jmVGEWiyyDyy9p2IbYY4QlR0",
+            authDomain: "crazy-bounty-hunter.firebaseapp.com",
+            databaseURL: "https://crazy-bounty-hunter-default-rtdb.firebaseio.com",
+            projectId: "crazy-bounty-hunter",
+            storageBucket: "crazy-bounty-hunter.appspot.com",
+            messagingSenderId: "28812789247",
+            appId: "1:28812789247:web:1287951d96af8f821813ca"
+        };
+        firebase.initializeApp(firebaseConfig)
+    </script>
+    <script src="../Game Page/enemy.js"></script>
+    <script src="../Game Page/shoot.js"></script>
+
+</head>
+
+<body>
+    <video id="welcomeVideo" autoplay loop>
+        <source src="./asset/video/nature_vid.mp4" type="video/mp4">
+    </video>
+    <div class="txt_content">
+        <h1>Welcome To our Bounty hunting...</h1>
+    </div>
+
+    <div class="detailsStyle">
+        <div id="lab">
+            <div id="content_login">
+
+                <h1>Your Data...</h1>
+                <form>
+                    <label>Enter your no : </label>
+                    <input type="text" id="p_no" placeholder="Mobile no..." /><br><br>
+
+
+                    <label>Enter secret identity : </label>
+                    <input type="text" id="name" placeholder="Your Secret Name..." /><br><br>
+
+                    <label>Enter secret code : </label>
+                    <input type="text" id="s_code" placeholder="Your Unick Secret Code...." />
+
+                    <div id="start_g">
+                        <h2>Start Bounty</h2>
+                    </div>
+
+                </form>
+            </div>
+
+            <div id="content_signup">
+
+                <h1>Create Data...</h1>
+                <form>
+                    <label>Enter your no : </label>
+                    <input type="text" id="c_p_no" placeholder="Mobile no..." /><br><br>
+
+                    <label>create secret identity : </label>
+                    <input type="text" id="c_name" placeholder="secret name...." />
+                    <br><br>
+
+                    <label>Your secret code is here : </label>
+                    <input type="text" id="c_s_code" readonly />
+                    <div id="code_gen">generate</div>
+
+                    <h2>Don't forget this secret code</h2>
+
+                    <div id="create_id">
+                        <h2>Start Creating.</h2>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <div id="btn">
+            <h2 id="info"></h2>
+            <div id="btn_s">Click Ee..</div>
+        </div>
+    </div>
+
+
+    <a-entity id="userID" hidden text="value:none"></a-entity>
+    <script src="./script.js"></script>
+
+
+</body>
+
+</html>
